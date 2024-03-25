@@ -7,10 +7,10 @@ ela está com peso normal, abaixo do peso, ou acima do peso.
 O IMC é calculado pela fórmula: peso / (altura ** 2)
 
 Considere que:
-peso < 18.5 é abaixo do peso,
-peso >= 18.5 e peso <= 24.9 é peso normal,
-peso > 24.9 e peso <= 29.9 é acima do peso,
-peso > 29.9 é obesisdade.
+IMC < 18.5 é abaixo do peso,
+IMC >= 18.5 e IMC <= 24.9 é peso normal,
+IMC > 24.9 e IMC <= 29.9 é acima do peso,
+IMC > 29.9 é obesisdade.
 
 retorne "Abaixo do peso", "Peso normal", "Acima do peso" ou "Obesidade" conforme o caso.
 

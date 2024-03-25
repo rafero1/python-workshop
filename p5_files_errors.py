@@ -1,3 +1,5 @@
+import os
+
 #
 # Tratamento de erros
 #
@@ -101,3 +103,26 @@ print(file.read())
 file.close()  # é necessário fechar o arquivo manualmente
 
 # sempre use o bloco with para abrir arquivos, pois ele garante que o arquivo será fechado corretamente, mesmo se ocorrer uma exceção
+
+# os é um módulo que fornece funções para interagir com o sistema operacional
+
+# __file__ é uma variável mágica do python que contém o caminho do arquivo atual
+print(__file__)  # caminho completo do arquivo atual (p5_files_errors.py)
+
+# use os.path.dirname para obter o diretório do arquivo
+# se usar em conjunto com __file__, é possível obter o diretório do arquivo atual
+# isso é útil para abrir arquivos de modo relativo ao arquivo atual, por exemplo
+print(os.path.dirname(__file__))
+
+# use os.path.join para juntar caminhos de arquivos
+# isso é útil para garantir que o caminho seja correto, independente do sistema operacional
+os.path.join(os.path.dirname(__file__), "arquivo.txt")
+
+# use os.path.exists para verificar se um arquivo ou diretório existe
+print(os.path.exists("arquivo.txt"))  # True
+
+# use os.path.isfile para verificar se um caminho é um arquivo
+print(os.path.isfile("arquivo.txt"))  # True
+
+# use os.path.isdir para verificar se um caminho é um diretório
+print(os.path.isdir(os.path.dirname(__file__)))  # True

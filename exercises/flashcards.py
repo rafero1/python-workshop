@@ -1,4 +1,4 @@
-from pathlib import Path
+import os
 
 """
 Flashcards são cartões usados para memorização de conteúdo. Eles são compostos por duas faces, uma com uma pergunta e outra com a resposta. O objetivo é que o estudante leia a pergunta e tente responder de memória, para depois verificar a resposta na outra face do cartão.
@@ -41,6 +41,6 @@ class Game:
 
 
 if __name__ == "__main__":
-    arquivo = Path(__file__).parent.absolute() / 'flashcards.txt'
+    arquivo = os.path.join(os.path.dirname(__file__), "flashcards.txt")
     game = Game(arquivo)
     game.start_game()

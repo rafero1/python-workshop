@@ -42,12 +42,12 @@ def do_test(func, *assertions):
     print(f"{bcolors.OKGREEN}{func_name} OK!{bcolors.ENDC}\n")
 
 
-def do_test_void(func, *assertions):
+def do_test_void(func, *func_args):
     func_name = func.__name__
 
     print(f"Testando {func_name}:")
 
-    for args in assertions:
+    for args in func_args:
         try:
             func(args) if len(func.__code__.co_varnames) == 1 else func(*args)
 

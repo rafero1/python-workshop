@@ -27,6 +27,18 @@ def t_print_lista(lista):
 do_test_void(t_print_lista, ["a", "b", "c"], [1, 2, 3])
 
 
+def t_add_sufix_lista(lista, sufixo):
+    """
+    Deve retornar uma nova lista com o sufixo adicionado a cada item da lista
+    Ex: ["a", "b", "c"], "!" -> ["a!", "b!", "c!"]
+    """
+    raise NotImplementedError
+
+
+do_test(t_add_sufix_lista, ((["a", "b", "c"], "!"), [
+        "a!", "b!", "c!"]), (([1, 2, 3], "x"), ["1x", "2x", "3x"]))
+
+
 def t_busca_linear(item, lista):
     """
     Deve retornar o índice do item na lista, ou -1 caso o item não exista na lista
@@ -39,6 +51,18 @@ def t_busca_linear(item, lista):
 
 do_test(t_busca_linear, (("molho", ["carne", "macarrão", "molho"]), 2), ((
     "frango", ["carne", "macarrão", "molho"]), -1))
+
+
+def t_contagem_char(lista, caractere):
+    """
+    Deve retornar a quantidade de vezes que o caractere aparece nas palavras da lista
+    Ex: ["a", "ba", "c"], "a" -> 2
+    """
+    raise NotImplementedError
+
+
+do_test(t_contagem_char, ((["a", "ba", "c"], "a"), 2),
+        ((["aranha", "banana", "cachorro"], "a"), 7))
 
 
 def t_fatorial(x):
@@ -73,11 +97,39 @@ def t_print_fatorial(x):
 do_test_void(t_print_fatorial, 5, 7)
 
 
+def t_dict_invertido(dicionario):
+    """
+    Deve retornar um dicionário com as chaves e valores invertidos
+
+    Ex: {"a": 1, "b": 2} -> {1: "a", 2: "b"}
+    """
+    raise NotImplementedError
+
+
+do_test(t_dict_invertido, ({"a": 1, "b": 2}, {1: "a", 2: "b"}), ({
+        "a": "x", "b": "y"}, {"x": "a", "y": "b"}))
+
+
+def t_set_diferenca(set1, set2):
+    """
+    Deve retornar um set com os elementos que estão em set1 mas não em set2.
+    Se não houver elementos diferentes, retorne um set vazio
+
+    Ex: {1, 2, 3}, {3, 4} -> {1, 2}
+    """
+    raise NotImplementedError
+
+
+do_test(t_set_diferenca, ({1, 2, 3}, {3, 4}, {1, 2}), ({1, 2, 3}, {
+        1, 2, 3}, set()), ({1, 2, 3}, {4, 5}, {1, 2, 3}))
+
+
 def t_peso_medio(lista_pesos):
     """
     Deve calcular e retornar o peso médio de uma lista de pesos
 
     O peso médio é a soma de todos os pesos dividido pela quantidade de pesos
+    Ex: [70, 80, 60] -> (70 + 80 + 60) / 3 = 70
 
     Dica: use sum(lista) para somar todos os valores de uma lista
     """
@@ -86,6 +138,7 @@ def t_peso_medio(lista_pesos):
 
 do_test(t_peso_medio, ([70, 80, 60], 70),
         ([100, 200, 300], 200), ([1, 2, 3], 2))
+
 
 def t_verificar_senha(senha):
     """
@@ -99,4 +152,6 @@ def t_verificar_senha(senha):
     """
     raise NotImplementedError
 
-do_test(t_verificar_senha, ("Abc123!@", True), ("abc123", False), ("Abc123", False), ("Abc123@", False), ("Abc123!@a", False))
+
+do_test(t_verificar_senha, ("Abc123!@", True), ("abc123", False),
+        ("Abc123", False), ("Abc123@", False), ("Abc123!@a", False))

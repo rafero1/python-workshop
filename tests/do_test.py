@@ -29,8 +29,7 @@ def do_test(func, *assertions):
 
         except AssertionError:
             print(
-                f"{func_name}{args} == {expected} {
-                    bcolors.FAIL}Falha!{bcolors.ENDC}"
+                f"{func_name}{args} == {expected} {bcolors.FAIL}Falha!{bcolors.ENDC}"
             )
             print(f"  {bcolors.FAIL}Esperado: {expected}{bcolors.ENDC}")
             print(f"  {bcolors.FAIL}Obtido: {result}{bcolors.ENDC}\n")

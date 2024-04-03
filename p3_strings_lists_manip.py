@@ -1,9 +1,8 @@
-from random import randint, choice, shuffle
-
 # Bibliotecas e Modulos
-# O Python possui uma grande quantidade de bibliotecas e módulos que podem ser importados e utilizados em seus programas.
-# Acima, importamos as funções randint, choice e shuffle do módulo random.
+# O Python possui uma grande quantidade de bibliotecas e módulos nativos que podem ser importados e utilizados em seus programas.
 
+# Abaixo, importamos as funções randint(), choice() e shuffle() do módulo random.
+from random import randint, choice, shuffle
 
 #
 # Operações e funções com strings
@@ -21,7 +20,7 @@ segunda_terceira = nome[1:3]
 
 # iterar uma string caractere por caractere
 for letra in "Marcos":
-    print(letra)  # M, a, r, c, o, s
+  print(letra)  # M, a, r, c, o, s
 
 # split: separar uma string em uma lista de substrings usando um caractere de separação
 # ["54", "23", "12", "73", "85", "24"]
@@ -57,7 +56,6 @@ nome_completo = f"{nome} da Silva"
 pi_string = f"Os primeiros três valores de pi é {pi: .3f}"
 f_operation = f"A operação {x} + {y} resulta em {x + y}"
 
-
 #
 # Estruturas de Dados
 #
@@ -74,13 +72,11 @@ lista = [1, 2, 3, 4, 5, 6]
 valor = lista.pop()  # 6
 valor = lista.pop(0)  # 1
 
-
 # operações com listas
 lista = [1, 2, 3, 4, 5]
 lista2 = [6, 7, 8, 9, 10]
 rs = lista + lista2  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 lista.extend(lista2)  # lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
 
 # slicing: novamente, podemos pegar partes de uma lista usando índices
 lista = [1, 2, 3, 4, 5]
@@ -159,9 +155,9 @@ del pessoa["profissão"]
 
 
 def print_dicionario(dicionario: dict):
-    # items() retorna uma lista de tuplas (chave, valor)
-    for chave, valor in dicionario.items():
-        print(f"{chave}: {valor}")
+  # items() retorna uma lista de tuplas (chave, valor)
+  for chave, valor in dicionario.items():
+    print(f"{chave}: {valor}")
 
 
 print_dicionario(pessoa)
@@ -184,5 +180,7 @@ tupla_dobro = (numero * 2 for numero in tupla1)  # (2, 4, 6, 8, 10)
 
 # dict comprehension
 pesos = {"marcos": 70, "vinicius": 80, "maria": 60}
-pesos_maiores_que_70 = {nome: peso for nome,
-                        peso in pesos.items() if peso > 70}  # {"vinicius": 80}
+pesos_maiores_que_70 = {
+    nome: peso
+    for nome, peso in pesos.items() if peso > 70
+}  # {"vinicius": 80}

@@ -1,5 +1,4 @@
 from random import shuffle, choice
-
 """
 Palavras embaralhadas
 
@@ -17,10 +16,10 @@ atenção! maiusculas e minusculas são letras diferentes
 
 
 def palavras_embaralhadas(palavras, chances):
-    raise NotImplementedError
+  raise NotImplementedError
 
 
 if __name__ == "__main__":
-    palavras = ['casa', 'papel', 'moeda', 'molho']
+  palavras = ['casa', 'papel', 'moeda', 'molho']
 
-    palavras_embaralhadas(palavras=palavras, chances=3)
+  palavras_embaralhadas(palavras=palavras, chances=3)

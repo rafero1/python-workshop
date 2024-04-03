@@ -23,11 +23,11 @@ python exercises/imc_calculator.py
 
 
 def imc_calculator():
-    raise NotImplementedError
+  raise NotImplementedError
 
 
 # a condição __name__ == "__main__" verifica se o arquivo está sendo executado diretamente
 # ele serve para garantir que o bloco dentro do if só seja executado se o arquivo for executado diretamente
 # é uma forma de prevenir que um código indevido seja executado quando o arquivo é importado como módulo
 if __name__ == "__main__":
-    imc_calculator()
+  imc_calculator()

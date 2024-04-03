@@ -16,11 +16,11 @@ Dicas:
 
 
 def mad_libs(historia: str):
-    raise NotImplementedError
+  raise NotImplementedError
 
 
 if __name__ == "__main__":
-    historia = """
+  historia = """
     Em um {1} dia, um {2}, muito {3}, resolveu {4} uma {5}.
     Todos os seus amigos ficaram {6}, e no final do dia, foram a sua casa para {7}.
     Porém, o que ningém sabia, é que o pobre {2} estava apenas {8}.
@@ -28,4 +28,4 @@ if __name__ == "__main__":
     Exceto o {2}, que morreu, mas passa bem.
     """
 
-    mad_libs(historia)
+  mad_libs(historia)

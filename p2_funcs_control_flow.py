@@ -25,7 +25,7 @@
 
 # Função sem parâmetros e sem retorno
 def teste():
-    print("Olá, Mundo!")
+  print("Olá, Mundo!")
 
 
 # Execute a função chamando o seu nome seguido de parênteses
@@ -34,23 +34,23 @@ teste()
 
 # Função com parâmetros e sem retorno
 def mais_um(x):
-    x += 1
+  x += 1
 
 
 # Função com parâmetros e com retorno
 def soma(x, y):
-    return x + y
+  return x + y
 
 
 # Podemos tipar os parâmetros e o retorno da função
 def soma2(x: int, y: int) -> int:
-    return x + y
+  return x + y
 
 
 # Podemos fornecer valores padrão para os parâmetros
 # Parâmetros com valores padrão devem ser os últimos parâmetros
-def soma_p(x, y = 0):
-    return x + y
+def soma_p(x, y=0):
+  return x + y
 
 
 # Não podemos ter múltiplas funções com o mesmo nome no mesmo escopo, mesmo que os parâmetros sejam diferentes
@@ -58,7 +58,6 @@ def soma_p(x, y = 0):
 # Encadeamento de funções
 # É possível chamar uma função dentro de outra função
 x = soma(10, soma(5, 5))
-
 
 # podemos também especificar o nome dos parâmetros na chamada da função
 x = soma(y=10, x=5)
@@ -72,24 +71,24 @@ x = 5
 
 
 def teste2():
-    print(x)
+  print(x)
 
 
 # variáveis declaradas dentro de funções são visíveis apenas no escopo da função
 def teste3():
-    f_x = 10
-    print(f_x)
+  f_x = 10
+  print(f_x)
 
 
 # parâmetros são visíveis apenas no escopo da função
 # parâmetros ou variáveis de mesmo nome subsuem variáveis declaradas no escopo pai
 def teste4(x: int):
-    print(x)
+  print(x)
 
 
 def teste5():
-    x = 10
-    print(x)
+  x = 10
+  print(x)
 
 
 #
@@ -99,26 +98,26 @@ def teste5():
 
 # if, elif, else são estruturas de controle de fluxo condicional
 def teste6(x: int, y: int):
-    z = soma(x, y)
+  z = soma(x, y)
 
-    resposta = ""
+  resposta = ""
 
-    if z > 100:
-        resposta = "maior que 100"
-    elif z > 10:
-        resposta = "maior que 10"
-    else:
-        resposta = "menor ou igual a 10"
+  if z > 100:
+    resposta = "maior que 100"
+  elif z > 10:
+    resposta = "maior que 10"
+  else:
+    resposta = "menor ou igual a 10"
 
-    return resposta
+  return resposta
 
 
 # While é uma estrutura de controle de fluxo de repetição
 # o while executa o bloco de código enquanto a condição for verdadeira
 def print_numeros(numero: int, fim: int):
-    while numero <= fim:
-        print(numero)
-        numero += 1
+  while numero <= fim:
+    print(numero)
+    numero += 1
 
 
 # Lista (List): Conjunto de valores ordenados, acessíveis por índice
@@ -134,20 +133,20 @@ lista_vazia = []
 # For também é uma estrutura de controle de fluxo de repetição
 # For executa o bloco de código para cada item da lista
 for item in carrinho:
-    print(item)
+  print(item)
 
 for numero in [1, 2, 3]:
-    print(soma(numero, numero))
+  print(soma(numero, numero))
 
 # range() é uma função nativa do Python que retorna uma lista de números
 # Formato: range(fim), range(inicio, fim) ou range(inicio, fim, passo)
 for i in range(5):
-    print(i)
+  print(i)
 
 # inicio é incluso, porém fim não é incluso.
 # Ou seja, range(0, 3) retona [0, 1, 2]
 for i in range(0, 3):
-    print(i)
+  print(i)
 
 for i in range(0, 10, 2):
-    print(i)
+  print(i)

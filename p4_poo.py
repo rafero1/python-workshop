@@ -2,19 +2,20 @@
 # Classes e Objetos
 #
 
+
 # Classes são modelos para criar objetos. Objetos são instâncias de classes.
 class Pessoa:
-    # O método __init__ é o construtor da classe. Ele é chamado quando um objeto é criado.
-    # self é uma referência ao objeto que está sendo criado.
-    def __init__(self, nome, idade):
-        # Atributos são variáveis que pertencem a um objeto.
-        # Toda instância de Pessoa terá um atributo nome e um atributo idade próprios.
-        self.nome = nome
-        self.idade = idade
+  # O método __init__ é o construtor da classe. Ele é chamado quando um objeto é criado.
+  # self é uma referência ao objeto que está sendo criado.
+  def __init__(self, nome, idade):
+    # Atributos são variáveis que pertencem a um objeto.
+    # Toda instância de Pessoa terá um atributo nome e um atributo idade próprios.
+    self.nome = nome
+    self.idade = idade
 
-    # Métodos são funções que pertencem a um objeto.
-    def aniversario(self):
-        self.idade += 1
+  # Métodos são funções que pertencem a um objeto.
+  def aniversario(self):
+    self.idade += 1
 
 
 # Para criar um objeto, chamamos a classe como se fosse uma função.
@@ -34,13 +35,14 @@ print(marcos.idade)  # 36
 
 
 class Aluno(Pessoa):
-    def __init__(self, nome, idade, matricula):
-        # super() é uma referência à classe pai.
-        super().__init__(nome, idade)  # Chama o construtor da classe pai.
-        self.matricula = matricula
 
-    def estudar(self):
-        print(f"{self.nome} está estudando")
+  def __init__(self, nome, idade, matricula):
+    # super() é uma referência à classe pai.
+    super().__init__(nome, idade)  # Chama o construtor da classe pai.
+    self.matricula = matricula
+
+  def estudar(self):
+    print(f"{self.nome} está estudando")
 
 
 # Um objeto da classe Aluno tem acesso aos atributos e métodos da classe Pessoa, pois Aluno herda de Pessoa.
@@ -63,23 +65,24 @@ joao.estudar()  # João está estudando
 
 
 class Animal:
-    def __init__(self, nome):
-        self.nome = nome
 
-    def falar(self):
-        raise NotImplementedError("Subclasse precisa implementar este método")
+  def __init__(self, nome):
+    self.nome = nome
+
+  def falar(self):
+    raise NotImplementedError("Subclasse precisa implementar este método")
 
 
 class Cachorro(Animal):
-    # sobrescrevendo o método falar da classe pai
-    def falar(self):
-        return f"{self.nome} diz Woof!"
+  # sobrescrevendo o método falar da classe pai
+  def falar(self):
+    return f"{self.nome} diz Woof!"
 
 
 class Gato(Animal):
-    # sobrescrevendo o método falar da classe pai
-    def falar(self):
-        return f"{self.nome} diz Meow!"
+  # sobrescrevendo o método falar da classe pai
+  def falar(self):
+    return f"{self.nome} diz Meow!"
 
 
 dog = Cachorro("Manuel")
@@ -99,17 +102,19 @@ print(isinstance(dog, Animal))  # True, pois Cachorro herda de Animal
 
 
 class Pato:
-    def nadar(self):
-        return "Pato nadando"
+
+  def nadar(self):
+    return "Pato nadando"
 
 
 class Galinha:
-    def nadar(self):
-        return "Galinha nadando"
+
+  def nadar(self):
+    return "Galinha nadando"
 
 
 def fazer_nadar(objeto):
-    print(objeto.nadar())
+  print(objeto.nadar())
 
 
 # Pato e Galinha não herdam de uma mesma classe, mas ambos têm um método nadar
@@ -120,7 +125,7 @@ fazer_nadar(Galinha())  # Galinha nadando
 
 # se usar tipagem, podemos impedir que um objeto seja tratado como um tipo que ele não é
 def fazer_nadar_pato(objeto: Pato):
-    print(objeto.nadar())
+  print(objeto.nadar())
 
 
 fazer_nadar_pato(Pato())  # Pato nadando
@@ -140,27 +145,29 @@ fazer_nadar_pato(Pato())  # Pato nadando
 
 
 class Funcionario:
-    def __init__(self):
-        self.__salario = 0  # no Python, por convenção, atributos privados começam com __
 
-    # decorators são uma característica da linguagem que permitem modificar a função ou método que o segue
-    # property é um decorator que cria um getter
-    # getter é um método que retorna o valor de um atributo privado
-    @property
-    def salario(self):
-        return self.__salario
+  def __init__(self):
+    self.__salario = 0  # no Python, por convenção, atributos privados começam com __
 
-    # decorator para criar um setter
-    @salario.setter
-    def salario(self, valor):
-        raise ValueError(
-            "Salário não pode ser alterado diretamente. Use o método aumentar_salario()")
+  # decorators são uma característica da linguagem que permitem modificar a função ou método que o segue
+  # property é um decorator que cria um getter
+  # getter é um método que retorna o valor de um atributo privado
+  @property
+  def salario(self):
+    return self.__salario
 
-    # método para modificar o salário
-    def aumentar_salario(self, aumento):
-        if aumento < 0:
-            raise ValueError("Aumento não pode ser negativo")
-        self.__salario += aumento
+  # decorator para criar um setter
+  @salario.setter
+  def salario(self, valor):
+    raise ValueError(
+        "Salário não pode ser alterado diretamente. Use o método aumentar_salario()"
+    )
+
+  # método para modificar o salário
+  def aumentar_salario(self, aumento):
+    if aumento < 0:
+      raise ValueError("Aumento não pode ser negativo")
+    self.__salario += aumento
 
 
 joao = Funcionario()
@@ -171,40 +178,40 @@ joao.salario  # 1000
 
 # perceba que o atributo __salario não pode ser acessado ou alterado diretamente, devido aos decorators
 try:
-    joao.__salario  # AttributeError: 'Funcionario' object has no attribute '__salario'
+  joao.__salario  # AttributeError: 'Funcionario' object has no attribute '__salario'
 except AttributeError as e:
-    print(e)
+  print(e)
 
 try:
-    # ValueError: Salário não pode ser alterado diretamente. Use o método aumentar_salario()
-    joao.salario = 2000
+  # ValueError: Salário não pode ser alterado diretamente. Use o método aumentar_salario()
+  joao.salario = 2000
 except ValueError as e:
-    print(e)
-
+  print(e)
 
 #
 # atributos estáticos
 #
 
+
 class Conta:
-    # atributos estáticos pertencem à classe, não aos objetos
-    # eles são compartilhados por todos os objetos da classe
-    # para acessar um atributo estático, usamos o nome da classe
-    saldo_total = 0
+  # atributos estáticos pertencem à classe, não aos objetos
+  # eles são compartilhados por todos os objetos da classe
+  # para acessar um atributo estático, usamos o nome da classe
+  saldo_total = 0
 
-    def __init__(self, saldo):
-        self.saldo = saldo
-        Conta.saldo_total += saldo
+  def __init__(self, saldo):
+    self.saldo = saldo
+    Conta.saldo_total += saldo
 
-    def depositar(self, valor):
-        self.saldo += valor
-        Conta.saldo_total += valor
+  def depositar(self, valor):
+    self.saldo += valor
+    Conta.saldo_total += valor
 
-    def sacar(self, valor):
-        if valor > self.saldo:
-            raise ValueError("Saldo insuficiente")
-        self.saldo -= valor
-        Conta.saldo_total -= valor
+  def sacar(self, valor):
+    if valor > self.saldo:
+      raise ValueError("Saldo insuficiente")
+    self.saldo -= valor
+    Conta.saldo_total -= valor
 
 
 print(Conta.saldo_total)  # 0

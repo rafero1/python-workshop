@@ -1,5 +1,4 @@
 import os
-
 """
 Flashcards são cartões usados para memorização de conteúdo. Eles são compostos por duas faces, uma com uma pergunta e outra com a resposta. O objetivo é que o estudante leia a pergunta e tente responder de memória, para depois verificar a resposta na outra face do cartão.
 
@@ -28,19 +27,21 @@ Requisitos:
 
 
 class Flashcard:
-    def __init__(self):
-        raise NotImplementedError
+
+  def __init__(self):
+    raise NotImplementedError
 
 
 class Game:
-    def __init__(self, arquivo):
-        self.arquivo = arquivo
 
-    def start_game(self):
-        raise NotImplementedError
+  def __init__(self, arquivo):
+    self.arquivo = arquivo
+
+  def start_game(self):
+    raise NotImplementedError
 
 
 if __name__ == "__main__":
-    arquivo = os.path.join(os.path.dirname(__file__), "flashcards.txt")
-    game = Game(arquivo)
-    game.start_game()
+  arquivo = os.path.join(os.path.dirname(__file__), "flashcards.txt")
+  game = Game(arquivo)
+  game.start_game()

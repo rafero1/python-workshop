@@ -2,7 +2,7 @@ import os
 
 
 def t_padronizar_nomes_de_arquivos(raiz):
-    """
+  """
     Renomeie todos os arquivos de um diretório para que o nome de cada arquivo siga o formato snake_case. Ex: "arquivo_n.txt"
 
     Dicas:
@@ -12,9 +12,9 @@ def t_padronizar_nomes_de_arquivos(raiz):
     - use item.path para obter o caminho completo de um arquivo
     - use os.rename(caminho_do_arquivo, novo_caminho_do_arquivo) para renomear um arquivo. Lembre-se que o caminho do arquivo é o caminho completo.
     """
-    raise NotImplementedError
+  raise NotImplementedError
 
 
 if __name__ == "__main__":
-    raiz = os.path.join(os.path.dirname(__file__), "arquivos")
-    t_padronizar_nomes_de_arquivos(raiz)
+  raiz = os.path.join(os.path.dirname(__file__), "arquivos")
+  t_padronizar_nomes_de_arquivos(raiz)

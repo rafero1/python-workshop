@@ -1,5 +1,4 @@
 from random import randint
-
 """
 Crie um jogo onde o computador escolhe um número aleatório entre 1 e 100,
 e o jogador tem que adivinhar o número em no máximo 10 tentativas.
@@ -19,8 +18,8 @@ python exercises/number_game.py
 
 
 def adivinhe_o_numero(min=1, max=100, chances=10):
-    raise NotImplementedError
+  raise NotImplementedError
 
 
 if __name__ == "__main__":
-    adivinhe_o_numero()
+  adivinhe_o_numero()

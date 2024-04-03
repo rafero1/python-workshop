@@ -17,7 +17,7 @@ retorne "Abaixo do peso", "Peso normal", "Acima do peso" ou "Obesidade" conforme
 Dicas:
 - use input() para receber os valores do usuário do peso e altura, e float() para converter para float
 
-Execute o programa rodando o seguinte comando no terminal dentro da pasta raiz do projeto:
+Execute o programa rodando o seguinte comando no Shell dentro da pasta raiz do projeto:
 python exercises/imc_calculator.py
 """
 

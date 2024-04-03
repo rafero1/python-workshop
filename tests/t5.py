@@ -4,6 +4,8 @@ from datetime import datetime
 # complete as funções abaixo
 # substitua "raise NotImplementedError" pelo seu código
 
+# Ao terminar, execute o comando abaixo no Shell para testar:
+# python tests/t5.test.py
 
 def t_escrever_log(caminho, linha):
   """

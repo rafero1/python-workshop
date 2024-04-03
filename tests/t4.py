@@ -3,6 +3,8 @@ from do_test import do_test, do_test_void
 # complete as classes abaixo
 # substitua "raise NotImplementedError" pelo seu código
 
+# Ao terminar, execute o comando abaixo no Shell para testar:
+# python tests/t4.test.py
 
 class TPessoa:
   """

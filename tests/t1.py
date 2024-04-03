@@ -1,6 +1,9 @@
 # complete as funções abaixo
 # substitua "raise NotImplementedError" pelo seu código
 
+# Ao terminar, execute o comando abaixo no Shell para testar:
+# python tests/t1.test.py
+
 
 # exemplo já pronto
 def t_somar(x, y):
@@ -29,5 +32,7 @@ def t_par(x):
 
 
 def t_adicionar_titulo(nome, titulo):
-  """ Deve retornar um nome completo no formato "titulo nome" """
+  """ Deve retornar um nome completo no formato "titulo nome" 
+  Ex: Se nome for "Marcos", titulo for "Sr.", então deve retornar "Sr. Marcos"
+  """
   raise NotImplementedError
